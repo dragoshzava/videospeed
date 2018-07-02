@@ -334,7 +334,7 @@ chrome.runtime.sendMessage({}, function(response) {
 
   function runAction(action, document, keyboard, e) {
     var videoTags = document.getElementsByTagName('video');
-    var audioTags = document.getElementsByTagName('video');
+    var audioTags = document.getElementsByTagName('audio');
     var allTags = [].concat([].slice.call(videoTags)).concat([].slice.call(audioTags));
     
     videoTags.forEach = Array.prototype.forEach;
