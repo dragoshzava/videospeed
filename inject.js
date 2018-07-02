@@ -278,7 +278,7 @@ chrome.runtime.sendMessage({}, function(response) {
       });
 
       function checkForVideo(node, parent, added) {
-        if (node.nodeName === 'VIDEO') {
+        if (node.nodeName === 'VIDEO' || node.nodeName === 'AUDIO') {
           if (added) {
             new tc.videoController(node, parent);
           } else {
