@@ -334,9 +334,12 @@ chrome.runtime.sendMessage({}, function(response) {
 
   function runAction(action, document, keyboard, e) {
     var videoTags = document.getElementsByTagName('video');
+    var audioTags = document.getElementsByTagName('video');
+    var allTags = [].concat([].slice.call(videoTags)).concat([].slice.call(audioTags));
+    
     videoTags.forEach = Array.prototype.forEach;
 
-    videoTags.forEach(function(v) {
+    allTags.forEach(function(v) {
       var id = v.dataset['vscid'];
       var controller = document.querySelector(`div[data-vscid="${id}"]`);
 
